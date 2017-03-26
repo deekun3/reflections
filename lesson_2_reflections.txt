@@ -1,0 +1,46 @@
+useful:
+git status : shows what is in the repository
+ls -a: shows all files including hidden files
+rm -rf "folder or file name": deletes even folders that are not empty
+git log --graph --oneline master coins: to show a graph/tree of the commits (one per line)
+
+Q. What happens when you initialize a repository? Why do you need to do it?
+
+A.When you initialize a repository it does not commit anything yet.  It creates a .git hidden folder that has meta data about the changes that happen on the files in your repository. 
+
+Q.How is the staging area different from the working directory and the repository? What value do you think it offers?
+A. The working directory is the set of files on your computer that you are working with (the latest versions). The repository is a summary of the commits and their history.  The staging area is a selection of files from the working directory that you want to add (commit) to the repository and so it allows us to update the repository with a new commit.
+
+Q.How can you use the staging area to make sure you have one commit per logical change?
+A. Use "git diff" to compare the contents of the working directory and staging area (files to be committed). Use "git diff --staged" to compare the contents of files in the staging area to the latest commit in the repository.  This allows us to check what changes exactly will be updated when we commit.
+
+Q. What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+A. Branches are useful for creating experimental changes to the main version, or creating separate versions of the code that you might want to merge later.
+
+Reflect: Visualizing with Diagrams
+Q. How do the diagrams help you visualize the branch structure?
+A. The diagrams (a directed graph) show you a tree-structure of a repository with each commit node's parent commit.  You can see which commits are not reachable from the master/named branches and thus will be lost if you checkout *any other commit*. That's why git has the command "git checkout -b new_branch_name" which is equivalent to the two commands:
+"git branch new_branch_name" and "git checkout new_branch_name"
+
+Reflect: Merging Two Branches
+Q. What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+A. When git merges two branches together, it creates a new commit (on whichever branch we have checked out) that combines together two commits.  First it finds their common ancestor in the tree structure of the repository.  It compares each line from the original commit with the tips of each branch.
+for (each line in the original file){
+	if(both files have original line){
+		include line in new commit;
+	} elsif (one file has deleted the original line){
+		do NOT include line in new commit;
+	} elsif (one file has added/changed the line){
+		include this new line in the new commit;
+	}
+}
+//and also make sure additions to the other files are added to the new commit
+
+In the tree diagram, we represent the merged commit as a new node that has two parent nodes: the tips of both tails being merged. When we do "git log" of the new node we can see all commits in both branches, organized by time stamp.  
+"git show file_name": To see the changes made to a commit in relation to its parent node. 
+"git branch -d branch_name" To delete the LABEL of a branch (not the commits themselves!). 
+
+Reflect: Automatic vs. Manual Merging
+Q. What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+A. Pros: in many cases it works automatically and no user input is required. This saves programmer a lot of work!
+Cons: in some cases there are still conflicts that the programmer must resolve.
