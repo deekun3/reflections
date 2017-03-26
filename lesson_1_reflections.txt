@@ -1,0 +1,45 @@
+Q. How did viewing a diff between two versions of a file help you see the bug that was introduced?
+
+A. Using FC (File Compare) in the command prompt on windows (search for "cmd.exe" or コマンドプロムプと):
+-shows differences between two files quickly regardless of the file sizes. This is much quicker than finding differences manually and is scalable to larger files.
+-->This lets us quickly find which specific lines of code are different.
+
+
+Q. How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+
+A. Having access to the entire history of a file could help programmers to:
+-experiment with new features and either add them (if successful) or revert back to old versions if unsuccessful
+-We can also revert to old versions if there are bugs in the new versions especially that are not easily solved.
+
+Q.What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
+
+Pros of Git:
+-It is easy to tell apart different commits because we commit at meaningful times and write a meaningful description.  This makes it easy for both the author and other collaborators/users to understand the code.
+
+Cons of Git:
+-It takes time to make commits and descriptions
+-Our descriptions may not be helpful
+-we may forget to commit
+-we might make commits that are too big (It's hard to find bugs) or too small (we end up with too many commits)
+
+
+Q. Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+
+A. Git stores files in a repository which is a collection of files that are related and are used together for making a project.  These files change together as the project as a whole changes.
+
+But Google Docs treats each file as a stand-alone with automatic updates that only affect that one file.
+
+Q. How can you use the commands git log and git diff to view the history of files?
+
+A. We can use git log to view all files and revision histories in detail.  Press down or up to scroll.  Press 'q' to quit the screen and return to the command line.
+
+Use git diff "file_old_file" "file_new_file" to compare the differences between the two files. We used a git command to add colours: green coloured-lines were added and red-coloured lines were deleted.
+-->git config --global color.ui auto
+
+Q. How might using version control make you more confident to make changes that could break something?
+
+A. By using version control I can try new things that are risky without being afraid of making a mistake or bug because I can revert to an old, trusted version at any point.
+
+Q. Now that you have your workspace set up, what do you want to try using Git for?
+
+A. I want to make repositories and projects!
