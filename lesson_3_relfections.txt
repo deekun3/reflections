@@ -1,0 +1,11 @@
+//Useful commands for GitHub
+How to sync from GitHub to computer: use "git clone"
+How to sync from computer to GitHub:
+-create an empty repository on GitHub
+-create a remote repository ("remote") on computer
+-->"git remote add remote_name remote_html_source"
+(where usually remote_name = origin
+and remote_html_source is the HTML source of the GitHub repository)
+-use "git push -u remote_name branch_name" to copy branch to GitHub
+(ie only and all updated nodes will be copied)
+(ie "git push -u origin master")
