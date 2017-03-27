@@ -18,3 +18,8 @@ Reflect: Manual vs. automatic pull
 Q. Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
 A. It might not be useful to be up-to-date with the remote repository on GitHub if you have been editing a same file on your local repository.
 
+Reflect: Forks, Clones, and Branches
+Q.Describe the differences between forks, clones, and branches. When would you use one instead of another?
+A. We make a new branch on a repository when we want to make changes to the main code (ie implementing a new feature) and possibly merge that change into the main body of code ("master branch") later, or just make a new version of the code (like an easy version of a game).
+If we have a repository on GitHub that we want on our computer, we can make a clone of it from GitHub.
+If another person has a repository on GitHub that we want to make our own version of, we can fork it on GitHub.  This is like making a new branch on their repository, but it's all on GitHub.  GitHub copies their repository onto our online profile, then links to their original repository. 
