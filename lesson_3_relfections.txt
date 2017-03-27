@@ -14,3 +14,7 @@ Reflect: When to Use a Remote Repository
 Q.When would you want to use a remote repository rather than keeping all your work local?
 A.We can use a remote repository to share our work with others in order to collaborate, seek feedback, or show our accomplishments.
 
+Reflect: Manual vs. automatic pull
+Q. Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
+A. It might not be useful to be up-to-date with the remote repository on GitHub if you have been editing a same file on your local repository.
+
