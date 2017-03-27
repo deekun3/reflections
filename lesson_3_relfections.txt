@@ -9,3 +9,8 @@ and remote_html_source is the HTML source of the GitHub repository)
 -use "git push -u remote_name branch_name" to copy branch to GitHub
 (ie only and all updated nodes will be copied)
 (ie "git push -u origin master")
+
+Reflect: When to Use a Remote Repository
+Q.When would you want to use a remote repository rather than keeping all your work local?
+A.We can use a remote repository to share our work with others in order to collaborate, seek feedback, or show our accomplishments.
+
