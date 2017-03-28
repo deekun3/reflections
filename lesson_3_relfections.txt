@@ -26,3 +26,6 @@ If another person has a repository on GitHub that we want to make our own versio
 
 Q.What is the benefit of having a copy of the last known state of the remote stored locally?
 A.When we have made changes to both the local repository and online repository (or during collaboration) the local and online versions are not in sync and we need to merge the changes each time.  However, if we always keep the last known state of the remote stored locally, changes that we make locally will be on the same branch as the remote's HEAD.  That way, when we want to update the remote/online repository, we push changes that result in a fast-forward merge.
+
+Q.How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+A. Without using Git or GitHub would be much harder because collaboration would mean manually sending/emailing the files to another person (or multiple people!) or posting onto my own website publicly, along with a description of all the changes made. My collaborators would then need to contact me and send their changes.
