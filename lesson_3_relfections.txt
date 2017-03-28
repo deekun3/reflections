@@ -23,3 +23,6 @@ Q.Describe the differences between forks, clones, and branches. When would you u
 A. We make a new branch on a repository when we want to make changes to the main code (ie implementing a new feature) and possibly merge that change into the main body of code ("master branch") later, or just make a new version of the code (like an easy version of a game).
 If we have a repository on GitHub that we want on our computer, we can make a clone of it from GitHub.
 If another person has a repository on GitHub that we want to make our own version of, we can fork it on GitHub.  This is like making a new branch on their repository, but it's all on GitHub.  GitHub copies their repository onto our online profile, then links to their original repository. 
+
+Q.What is the benefit of having a copy of the last known state of the remote stored locally?
+A.When we have made changes to both the local repository and online repository (or during collaboration) the local and online versions are not in sync and we need to merge the changes each time.  However, if we always keep the last known state of the remote stored locally, changes that we make locally will be on the same branch as the remote's HEAD.  That way, when we want to update the remote/online repository, we push changes that result in a fast-forward merge.
