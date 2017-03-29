@@ -29,3 +29,6 @@ A.When we have made changes to both the local repository and online repository (
 
 Q.How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
 A. Without using Git or GitHub would be much harder because collaboration would mean manually sending/emailing the files to another person (or multiple people!) or posting onto my own website publicly, along with a description of all the changes made. My collaborators would then need to contact me and send their changes.
+
+Q. When would you want to make changes in a separate branch rather than directly in master? What benefits does each approach have?
+A. Making changes in a separate branch (on GitHub) is important when we are collaborating with others and want to propose or request a new feature. Merging the changes with the master branch takes more work, so regular changes should be made directly on the master branch.
